@@ -1,7 +1,7 @@
 #All Backend Variables
-mysql_user: root
-mysql_password: ExpenseApp@1
-mysql_host: mysql.gangs.shop
+# mysql_user: root
+# mysql_password: ExpenseApp@1  # used ansible-vault for user & password 
+mysql_host: mysql.gangs.shop        
 
 application_url: https://raw.githubusercontent.com/daws-90s/expense-documentation/refs/heads/main/artifacts/expense-backend-v3.tar.gz
 directory_name: App directory
