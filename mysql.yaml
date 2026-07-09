@@ -1,6 +1,5 @@
 - name: MySQL Configuration
-  hosts: local
-  connection: local
+  hosts: mysql
   become: yes
   vars_files:
     - /var/expense/credentials.yaml 
