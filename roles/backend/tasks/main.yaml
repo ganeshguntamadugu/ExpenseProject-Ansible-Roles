@@ -19,16 +19,22 @@
     state: present
 
 - name: Import tasks from common role
+  tags:
+    - deployment
   ansible.builtin.import_role:
     name: common
     tasks_from: similar
 
 - name: Installing Dependencies
+  tags: 
+    - deployment
   ansible.builtin.npm:
     path: /app
 
 - name: Configure SystemD Service #Copy works only for files without variables
   #ansible.builtin.copy:
+  tags:
+    - deployment
   ansible.builtin.template:
     src: backend-config.j2
     dest: /etc/systemd/system/backend.service
